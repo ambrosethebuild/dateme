@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.HomeActivity">
+
+
+    <LinearLayout
+        android:id="@+id/top_nav_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="20dp">
+
+        <com.google.android.material.button.MaterialButton
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:minWidth="0dp"
+            android:minHeight="0dp"
+            app:icon="@drawable/ic_avatar"
+            app:iconTint="#D2D2D2" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <com.google.android.material.button.MaterialButton
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minWidth="0dp"
+                android:minHeight="0dp"
+                app:icon="@drawable/dateme_icon" />
+        </LinearLayout>
+
+        <com.google.android.material.button.MaterialButton
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:minWidth="0dp"
+            android:minHeight="0dp"
+            app:icon="@drawable/ic_chat"
+            app:iconTint="#FFD2D2D2" />
+
+    </LinearLayout>
+
+
+    <com.yuyakaido.android.cardstackview.CardStackView
+        android:id="@+id/card_stack_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottom_action_bar"
+        android:layout_below="@+id/top_nav_bar"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:clipToPadding="false"
+        android:padding="4dp"></com.yuyakaido.android.cardstackview.CardStackView>
+
+
+    <LinearLayout
+        android:id="@+id/bottom_action_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/activity_home_skip_user_fab"
+                style="@style/Widget.MaterialComponents.FloatingActionButton"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:backgroundTint="@android:color/white"
+                android:elevation="2dp"
+                android:outlineSpotShadowColor="@color/colorPrimary"
+                android:padding="30dp"
+                android:src="@drawable/ic_dislike"
+                app:borderWidth="0dp"
+                app:fabCustomSize="70dp"
+                app:fabSize="normal"
+                app:rippleColor="@color/colorPrimary"
+                app:useCompatPadding="true" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/activity_home_super_love_user_fab"
+                style="@style/Widget.MaterialComponents.FloatingActionButton"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:backgroundTint="@android:color/white"
+                android:elevation="2dp"
+                android:outlineSpotShadowColor="@color/colorAccent"
+                android:padding="30dp"
+                android:src="@drawable/ic_gift"
+                app:borderWidth="0dp"
+                app:fabCustomSize="80dp"
+                app:fabSize="normal"
+                app:rippleColor="@color/colorPrimary"
+                app:tint="@color/colorAccent"
+                app:useCompatPadding="true" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/activity_home_love_user_fab"
+                style="@style/Widget.MaterialComponents.FloatingActionButton"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:backgroundTint="@color/colorPrimary"
+                android:elevation="2dp"
+                android:outlineSpotShadowColor="@color/colorPrimary"
+                android:padding="30dp"
+                android:src="@drawable/ic_like"
+                app:borderWidth="0dp"
+                app:fabCustomSize="70dp"
+                app:fabSize="normal"
+                app:rippleColor="@color/colorPrimary"
+                app:tint="#FFFFFF"
+                app:useCompatPadding="true" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</RelativeLayout>
